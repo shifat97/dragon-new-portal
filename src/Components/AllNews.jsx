@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Category from "./Category";
 import { CiCalendar } from "react-icons/ci";
+import SingleNews from "./SingleNews";
 
 export default function AllNews() {
   const newsData = useLoaderData();
@@ -26,7 +27,11 @@ export default function AllNews() {
           ))}
         </div>
       </div>
-      <div className="col-span-1 md:col-span-3">Coming Soon...</div>
+      <div className="col-span-1 md:col-span-3 grid grid-cols-1 gap-4">
+        {newsData.map((data) => (
+          <SingleNews key={data._id} data={data} />
+        ))}
+      </div>
     </div>
   );
 }
