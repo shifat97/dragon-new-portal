@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Feed from "../Components/Feed";
 import News from "../Components/News";
+import AllNews from "../Components/AllNews";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,12 @@ const router = createBrowserRouter([
           {
             path: "/",
             element: <Feed />,
+            children: [
+              {
+                path: "/",
+                element: <AllNews />,
+              },
+            ],
           },
           {
             path: "/news",
