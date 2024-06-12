@@ -23,6 +23,7 @@ const router = createBrowserRouter([
               {
                 path: "/",
                 element: <AllNews />,
+                loader: () => fetch("news.json"),
               },
             ],
           },
