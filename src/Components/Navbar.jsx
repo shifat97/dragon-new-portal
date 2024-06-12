@@ -37,9 +37,11 @@ export default function Navbar() {
       </div>
       <div className="flex gap-2 items-center">
         <img width={40} height={40} src={userImage} alt="" />
-        <button className="bg-[#403F3F] text-white px-6 py-1 rounded-md cursor-pointer">
-          Login
-        </button>
+        <Link to="/account/login">
+          <button className="bg-[#403F3F] text-white px-6 py-1 rounded-md cursor-pointer">
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );

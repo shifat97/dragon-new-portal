@@ -1,6 +1,6 @@
 export default function Register() {
   return (
-    <div className="bg-[#F3F3F3] mt-10 p-10 lg:w-[600px] lg:mx-auto">
+    <div className="bg-[#F3F3F3] mt-20 p-10 lg:w-[600px] lg:mx-auto">
       <h1 className="text-[35px] text-[#403F3F] font-semibold text-center">
         Register your account
       </h1>
