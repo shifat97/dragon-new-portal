@@ -24,8 +24,8 @@ export default function Feed() {
     <div>
       <Marque />
       <Navbar />
-      <section className="feed-container grid grid-cols-4 gap-4 mt-[70px]">
-        <div className="col-span-3">
+      <section className="feed-container grid md:grid-cols-4 gap-4 mt-[70px]">
+        <div className="col-span-1 md:col-span-3">
           <Outlet />
         </div>
         <div className="col-span-1">

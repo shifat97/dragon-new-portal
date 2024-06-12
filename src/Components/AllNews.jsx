@@ -6,7 +6,7 @@ export default function AllNews() {
   const newsData = useLoaderData();
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-4 gap-4">
       <div className="col-span-1">
         <h1 className="text-2xl font-semibold mb-4">All Category</h1>
         <Category />
@@ -26,7 +26,7 @@ export default function AllNews() {
           ))}
         </div>
       </div>
-      <div className="col-span-3">Coming Soon...</div>
+      <div className="col-span-1 md:col-span-3">Coming Soon...</div>
     </div>
   );
 }

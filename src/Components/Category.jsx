@@ -11,7 +11,7 @@ export default function Category() {
 
   return (
     <div>
-      <ul className="text-[#9F9F9F]">
+      <ul className="text-[#9F9F9F] flex flex-wrap lg:flex-col">
         {category.map((cat, idx) => (
           <li
             className="p-4 hover:bg-[#E7E7E7] cursor-pointer hover:text-black"
