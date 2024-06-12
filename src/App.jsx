@@ -1,10 +1,11 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <div className="p-4 max-w-[1240px] mx-auto">
+      <Outlet />
+    </div>
   );
 }
 
