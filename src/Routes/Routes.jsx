@@ -4,7 +4,8 @@ import Home from "../Pages/Home";
 import Account from "../Pages/Account";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
-
+import Feed from "../Components/Feed";
+import News from "../Components/News";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        children: [
+          {
+            path: "/",
+            element: <Feed />,
+          },
+          {
+            path: "/news",
+            element: <News />,
+          },
+        ],
       },
       {
         element: <Account />,
