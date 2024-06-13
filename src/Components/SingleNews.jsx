@@ -3,7 +3,7 @@ import { FaRegBookmark, FaShareAlt, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function SingleNews({ data }) {
-  const { author, title, image_url, rating, total_view, details } = data;
+  const { _id, author, title, image_url, rating, total_view, details } = data;
 
   return (
     <div className="border">
@@ -34,7 +34,10 @@ export default function SingleNews({ data }) {
         <div className="mt-6">
           <p>
             {details.length > 200 ? details.slice(0, 200) + "..." : details}
-            <Link className="text-[#FF8C47] cursor-pointer hover:underline">
+            <Link
+              to={`/news/${_id}`}
+              className="text-[#FF8C47] cursor-pointer hover:underline"
+            >
               Read More
             </Link>
           </p>
