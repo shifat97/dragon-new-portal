@@ -1,11 +1,30 @@
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+
 export default function Register() {
+  const { handleRegisterUser } = useContext(AuthContext);
+
+  const handleRegisterForm = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    handleRegisterUser(email, password)
+      .then(() => {
+        alert("User created");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
+
   return (
     <div className="bg-[#F3F3F3] mt-20 p-10 lg:w-[600px] lg:mx-auto">
       <h1 className="text-[35px] text-[#403F3F] font-semibold text-center">
         Register your account
       </h1>
       <hr className="my-4" />
-      <form className="flex flex-col gap-6">
+      <form onSubmit={handleRegisterForm} className="flex flex-col gap-6">
         <div>
           <label className="text-xl font-semibold" htmlFor="username">
             Your Name
