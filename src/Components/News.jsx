@@ -19,7 +19,6 @@ export default function News() {
   }
 
   const getData = data.find((d) => d._id === id);
-  console.log(getData);
 
   return (
     <div className="mt-20">
